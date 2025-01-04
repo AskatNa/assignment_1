@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BMI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: bisque;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form{
+            background: royalblue;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+            padding: 20px;
+            width: 300px;
+            max-width: 200px;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+        }
+        input[type='text'] {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 15px;
+            outline: none;
+        }
+        input[type="text"]:focus{
+            border-color: gold;
+            box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+        }
+        button {
+            padding: 10px;
+            background-color: grey;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: forestgreen;
+        }
+    </style>
+</head>
+<body>
+<div class="form">
+    <form action="/bmiCalculator" method="post">
+        <input class="Weight" type="text" name="weight" placeholder="weight">
+        <input class="Height" type="text" name="height" placeholder="height">
+        <button type="submit" name="submit">Calculate BMI</button>
+    </form>
+</div>
+</body>
+</html>
